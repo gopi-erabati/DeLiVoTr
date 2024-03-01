@@ -23,6 +23,8 @@ Existing feature extraction networks for LiDAR-based 3D object detection down-st
 | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  |
 | DeLiVoTr Waymo | 73.4/72.8 | 65.0/64.5 | 79.2/70.2 | 71.7/63.4 | 68.5/66.8 | 65.9/64.2 |
 
+We can not distribute the model weights on Waymo dataset due to the [Waymo license terms](https://waymo.com/open/terms).
+
 | Config | Ped. easy | Ped. mod. | Ped. hard | Cyc. easy | Cyc. mod. | Cyc. hard |
 | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  |
 | DeLiVoTr KITTI | 75.2 | 69.6 | 64.4 | 87.6 | 64.6 | 61.3 |
