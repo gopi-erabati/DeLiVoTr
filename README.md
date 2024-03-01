@@ -3,7 +3,7 @@
 This is the official PyTorch implementation of the paper **DeLiVoTr: Deep and Light-weight Voxel Transformer for 3D Object Detection**, by Gopi Krishna Erabati and Helder Araujo.
 
 **Contents**
-1. [Overview](https://github.com/gopi-erabati/DeLiVoTr/edit/master/README.md#overview)
+1. [Overview](https://github.com/gopi-erabati/DeLiVoTr?tab=readme-ov-file#overview)
 2. [Results](https://github.com/gopi-erabati/DeLiVoTr/edit/master/README.md#results)
 3. [Requirements, Installation and Usage](https://github.com/gopi-erabati/DeLiVoTr/edit/master/README.md#requirements-installation-and-usage)
 4. [Acknowlegements](https://github.com/gopi-erabati/DeLiVoTr/edit/master/README.md#acknowlegements)
