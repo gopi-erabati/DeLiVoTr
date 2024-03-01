@@ -25,7 +25,7 @@ Existing feature extraction networks for LiDAR-based 3D object detection down-st
 
 | Config | Ped. easy | Ped. mod. | Ped. hard | Cyc. easy | Cyc. mod. | Cyc. hard |
 | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  |
-| DeliVoTr KITTI | 75.2 | 69.6 | 64.4 | 87.6 | 64.6 | 61.3 |
+| DeLiVoTr KITTI | 75.2 | 69.6 | 64.4 | 87.6 | 64.6 | 61.3 |
 
 ## Requirements, Installation and Usage
 
@@ -101,13 +101,13 @@ cd DeLiVoTr
     1. `export PYTHONPATH=$(pwd):$PYTHONPATH`
     2. `python tools/train.py configs/delivotr_waymo.py --work-dir {WORK_DIR}`
 - Multi GPU training
-  `tools/dist_train.sh configs/delivotr_waymo.py 2 --work-dir {WORK_DIR}`
+  `tools/dist_train.sh configs/delivotr_waymo.py {GPU_NUM} --work-dir {WORK_DIR}`
 #### KITTI dataset
 - Single GPU training
     1. `export PYTHONPATH=$(pwd):$PYTHONPATH`
     2. `python tools/train.py configs/delivotr_kitti.py --work-dir {WORK_DIR}`
 - Multi GPU training
-  `tools/dist_train.sh configs/delivotr_kitti.py 2 --work-dir {WORK_DIR}`
+  `tools/dist_train.sh configs/delivotr_kitti.py {GPU_NUM} --work-dir {WORK_DIR}`
 
 ### Testing
 #### Waymo dataset 
@@ -115,13 +115,13 @@ cd DeLiVoTr
     1. `export PYTHONPATH=$(pwd):$PYTHONPATH`
     2. `python tools/test.py configs/delivotr_waymo.py /path/to/ckpt --eval waymo`
 - Multi GPU training
-  `tools/dist_test.sh configs/delivotr_waymo.py /path/to/ckpt 2 --eval waymo`
+  `tools/dist_test.sh configs/delivotr_waymo.py /path/to/ckpt {GPU_NUM} --eval waymo`
 #### KITTI dataset
 - Single GPU testing
     1. `export PYTHONPATH=$(pwd):$PYTHONPATH`
     2. `python tools/test.py configs/delivotr_kitti.py /path/to/ckpt --eval bbox`
 - Multi GPU training
-  `tools/dist_test.sh configs/delivotr_kitti.py 2 /path/to/ckpt 2 --eval bbox`
+  `tools/dist_test.sh configs/delivotr_kitti.py 2 /path/to/ckpt {GPU_NUM} --eval bbox`
 
 ## Acknowlegements
 We sincerely thank the contributors for their open-source code: [MMCV](https://github.com/open-mmlab/mmcv), [MMDetection](https://github.com/open-mmlab/mmdetection), [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [SST](https://github.com/tusen-ai/SST), [DeLighT](https://github.com/sacmehta/delight).
