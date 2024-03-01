@@ -4,9 +4,9 @@ This is the official PyTorch implementation of the paper **DeLiVoTr: Deep and Li
 
 **Contents**
 1. [Overview](https://github.com/gopi-erabati/DeLiVoTr?tab=readme-ov-file#overview)
-2. [Results](https://github.com/gopi-erabati/DeLiVoTr/edit/master/README.md#results)
-3. [Requirements, Installation and Usage](https://github.com/gopi-erabati/DeLiVoTr/edit/master/README.md#requirements-installation-and-usage)
-4. [Acknowlegements](https://github.com/gopi-erabati/DeLiVoTr/edit/master/README.md#acknowlegements)
+2. [Results](https://github.com/gopi-erabati/DeLiVoTr?tab=readme-ov-file#results)
+3. [Requirements, Installation and Usage](https://github.com/gopi-erabati/DeLiVoTr?tab=readme-ov-file#requirements-installation-and-usage)
+4. [Acknowlegements](https://github.com/gopi-erabati/DeLiVoTr?tab=readme-ov-file#acknowlegements)
 
 ## Overview
 Existing feature extraction networks for LiDAR-based 3D object detection down-stride the LiDAR feature maps similar to 2D feature extraction networks. Such down-striding of feature maps in large scale autonomous driving scenarios will hinder the detection of small size objects, such as *pedestrians*. To solve this issue we design an architecture that not only maintains the same stride but also the receptive field in the feature extraction network. We resort to attention mechanism to build sufficient receptive field and we propose a **De**ep and **Li**ght-weight **Vo**xel **Tr**ansformer (DeLiVoTr) network with voxel intra- and inter-region transformer modules to extract voxel local and global features respectively. The DeLiVoTr block is the core of the DeLiVoTr network which uses DeLighT transformations with expand and reduce strategy to vary the width and depth of network efficiently. This facilitates to learn wider and deeper voxel representations and enables to use not only smaller dimension for attention mechanism but also a light-weight feed-forward network, facilitating the reduction of parameters and operations. In addition to *model* scaling, we employ *layer-level* scaling for efficient parameter allocation in each encoder layer instead of fixed number of parameters as in existing approaches. Leveraging *layer-level depth* and *width* scaling we formulate three variants of DeLiVoTr network. We conduct extensive experiments and analysis on large-scale Waymo and KITTI datasets. Our network surpasses state-of-the-art methods for detection of small objects (*pedestrian*) with an inference speed of 20.5 FPS.
