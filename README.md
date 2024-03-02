@@ -25,9 +25,9 @@ Existing feature extraction networks for LiDAR-based 3D object detection down-st
 
 We can not distribute the model weights on Waymo dataset due to the [Waymo license terms](https://waymo.com/open/terms).
 
-| Config | Ped. easy | Ped. mod. | Ped. hard | Cyc. easy | Cyc. mod. | Cyc. hard |
-| :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  |
-| DeLiVoTr KITTI | 75.2 | 69.6 | 64.4 | 87.6 | 64.6 | 61.3 |
+| Config | Ped. easy | Ped. mod. | Ped. hard | Cyc. easy | Cyc. mod. | Cyc. hard | |
+| :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---: |
+| DeLiVoTr KITTI | 75.2 | 69.6 | 64.4 | 87.6 | 64.6 | 61.3 | [model](https://drive.google.com/file/d/1MJYIhJ6ujHBgwud3vX_YsoRRTBVM1aaZ/view?usp=sharing) |
 
 ## Requirements, Installation and Usage
 
@@ -50,16 +50,20 @@ mkvirtualenv delivotr
 pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
 
 pip install -U openmim
-mim install mmdet3d==1.0.0.rc6
+mim install mmcv-full==1.7.0
+pip install mmdet==2.28.2
+pip install mmsegmentation==0.30.0
+pip install mmdet3d==1.0.0.rc6
+
 pip install spconv-cu117
 pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.1+cu117.html
 pip install waymo-open-dataset-tf-2-2-0
-
-pip install numpy==1.19.5
-pip install pandas==1.1.5
 pip install open3d==0.15.2
 pip install ipdb
+pip install numpy==1.19.5
+pip install pandas==1.1.5
 pip install protobuf==3.19.6
+pip install yapf==0.40.1
 ```
 Also, please install [TorchEx](https://github.com/Abyssaledge/TorchEx)
 
