@@ -21,13 +21,13 @@ Existing feature extraction networks for LiDAR-based 3D object detection down-st
 
 | Config | Veh. L1 AP/APH | Veh. L2 AP/APH | Ped. L1 AP/APH | Ped. L2 AP/APH | Cyc. L1 AP/APH | Cyc. L2 AP/APH |
 | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  |
-| DeLiVoTr Waymo | 73.4/72.8 | 65.0/64.5 | 79.2/70.2 | 71.7/63.4 | 68.5/66.8 | 65.9/64.2 |
+| [DeLiVoTr Waymo](configs/delivotr_waymo.py) | 73.4/72.8 | 65.0/64.5 | 79.2/70.2 | 71.7/63.4 | 68.5/66.8 | 65.9/64.2 |
 
 We can not distribute the model weights on Waymo dataset due to the [Waymo license terms](https://waymo.com/open/terms).
 
 | Config | Ped. easy | Ped. mod. | Ped. hard | Cyc. easy | Cyc. mod. | Cyc. hard | |
 | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---:  | :---: |
-| DeLiVoTr KITTI | 75.2 | 69.6 | 64.4 | 87.6 | 64.6 | 61.3 | [model](https://drive.google.com/file/d/1MJYIhJ6ujHBgwud3vX_YsoRRTBVM1aaZ/view?usp=sharing) |
+| [DeLiVoTr KITTI](configs/delivotr_kitti.py) | 75.2 | 69.6 | 64.4 | 87.6 | 64.6 | 61.3 | [model](https://drive.google.com/file/d/1MJYIhJ6ujHBgwud3vX_YsoRRTBVM1aaZ/view?usp=sharing) |
 
 ## Requirements, Installation and Usage
 
