@@ -48,22 +48,11 @@ The code is tested on the following configuration:
 mkvirtualenv delivotr
 
 pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
-
 pip install -U openmim
 mim install mmcv-full==1.7.0
-pip install mmdet==2.28.2
-pip install mmsegmentation==0.30.0
-pip install mmdet3d==1.0.0.rc6
-
-pip install spconv-cu117
 pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.1+cu117.html
-pip install waymo-open-dataset-tf-2-2-0
-pip install open3d==0.15.2
-pip install ipdb
-pip install numpy==1.19.5
-pip install pandas==1.1.5
-pip install protobuf==3.19.6
-pip install yapf==0.40.1
+
+pip install -r requirements.txt
 ```
 Also, please install [TorchEx](https://github.com/Abyssaledge/TorchEx)
 
@@ -125,9 +114,9 @@ cd DeLiVoTr
 #### KITTI dataset
 - Single GPU testing
     1. `export PYTHONPATH=$(pwd):$PYTHONPATH`
-    2. `python tools/test.py configs/delivotr_kitti.py /path/to/ckpt --eval bbox`
+    2. `python tools/test.py configs/delivotr_kitti.py /path/to/ckpt --eval mAP`
 - Multi GPU training
-  `tools/dist_test.sh configs/delivotr_kitti.py 2 /path/to/ckpt {GPU_NUM} --eval bbox`
+  `tools/dist_test.sh configs/delivotr_kitti.py /path/to/ckpt {GPU_NUM} --eval mAP`
 
 ## Acknowlegements
 We sincerely thank the contributors for their open-source code: [MMCV](https://github.com/open-mmlab/mmcv), [MMDetection](https://github.com/open-mmlab/mmdetection), [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [SST](https://github.com/tusen-ai/SST), [DeLighT](https://github.com/sacmehta/delight).
