@@ -77,7 +77,7 @@ sudo apt install build-essential
 bazel clean
 
 bazel build waymo_open_dataset/metrics/tools/compute_detection_metrics_main
-cp bazel-bin/waymo_open_dataset/metrics/tools/compute_detection_metrics_main ../DeLiVoTr/lib//core/evaluation/waymo_utils/
+cp bazel-bin/waymo_open_dataset/metrics/tools/compute_detection_metrics_main ../DeLiVoTr/lib/core/evaluation/waymo_utils/
 ```
 
 ### Data
