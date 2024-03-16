@@ -48,6 +48,13 @@ The code is tested on the following configuration:
 - [mmdet3d](https://github.com/open-mmlab/mmdetection3d)==1.0.0.rc6
 
 ### Installation
+
+### Clone the repository
+```
+git clone https://github.com/gopi-erabati/DeLiVoTr.git
+cd DeLiVoTr
+```
+
 ```
 mkvirtualenv delivotr
 
@@ -87,12 +94,6 @@ cp bazel-bin/waymo_open_dataset/metrics/tools/compute_detection_metrics_main ../
 ### Data
 Follow [MMDetection3D-1.0.0.rc6](https://github.com/open-mmlab/mmdetection3d/tree/v1.0.0rc6) to prepare the [Waymo](https://mmdetection3d.readthedocs.io/en/latest/advanced_guides/datasets/waymo.html) and [KITTI](https://mmdetection3d.readthedocs.io/en/latest/advanced_guides/datasets/kitti.html) datasets and symlink the data directories to `data/` folder of this repository.
 **Warning:** Please strictly follow [MMDetection3D-1.0.0.rc6](https://github.com/open-mmlab/mmdetection3d/tree/v1.0.0rc6) code to prepare the data because other versions of MMDetection3D have different coordinate refactoring.
-
-### Clone the repository
-```
-git clone https://github.com/gopi-erabati/DeLiVoTr.git
-cd DeLiVoTr
-```
 
 ### Training
 #### Waymo dataset 
