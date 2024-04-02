@@ -1,6 +1,8 @@
 # DeLiVoTr: Deep and Light-weight Voxel Transformer for 3D Object Detection
 
-This is the official PyTorch implementation of the paper **DeLiVoTr: Deep and Light-weight Voxel Transformer for 3D Object Detection**, by Gopi Krishna Erabati and Helder Araujo.
+This is the official PyTorch implementation of the paper **DeLiVoTr: Deep and Light-weight Voxel Transformer for 3D Object Detection**.
+
+Gopi Krishna Erabati and Helder Araujo, "DeLiVoTr: Deep and light-weight voxel transformer for 3D object detection," in _Intelligent Systems with Applications_, Volume 22, 2024, 200361, ISSN 2667-3053, [https://doi.org/10.1016/j.iswa.2024.200361](https://doi.org/10.1016/j.iswa.2024.200361).
 
 **Contents**
 1. [Overview](https://github.com/gopi-erabati/DeLiVoTr#overview)
@@ -11,6 +13,7 @@ This is the official PyTorch implementation of the paper **DeLiVoTr: Deep and Li
     3. [Training](https://github.com/gopi-erabati/DeLiVoTr#training)
     4. [Testing](https://github.com/gopi-erabati/DeLiVoTr#testing)
 4. [Acknowlegements](https://github.com/gopi-erabati/DeLiVoTr#acknowlegements)
+5. [Citation](https://github.com/gopi-erabati/DeLiVoTr#citation)
 
 ## Overview
 The image-based backbone (feature extraction) networks downsample the feature maps not only to increase the receptive field but also to efficiently detect objects of various scales. The existing feature extraction networks in LiDAR-based 3D object detection tasks follow the feature map downsampling similar to image-based feature extraction networks to increase the receptive field. But, such downsampling of LiDAR feature maps in large-scale autonomous driving scenarios hinder the detection of small size objects, such as *pedestrians*. To solve this issue we design an architecture that not only maintains the same scale of the feature maps but also the receptive field in the feature extraction network to aid for efficient detection of small size objects. We resort to attention mechanism to build sufficient receptive field and we propose a **De**ep and **Li**ght-weight **Vo**xel **Tr**ansformer (DeLiVoTr) network with voxel intra- and inter-region transformer modules to extract voxel local and global features respectively. We introduce DeLiVoTr block that uses transformations with expand and reduce strategy to vary the width and depth of the network efficiently. This facilitates to learn wider and deeper voxel representations and enables to use not only smaller dimension for attention mechanism but also a light-weight feed-forward network, facilitating the reduction of parameters and operations. In addition to *model* scaling, we employ *layer-level* scaling of DeLiVoTr encoder layers for efficient parameter allocation in each encoder layer instead of fixed number of parameters as in existing approaches. Leveraging *layer-level depth* and *width* scaling we formulate three variants of DeLiVoTr network. We conduct extensive experiments and analysis on large-scale Waymo and KITTI datasets. Our network surpasses state-of-the-art methods for detection of small objects (*pedestrians*) with an inference speed of 20.5 FPS.
@@ -125,4 +128,19 @@ Follow [MMDetection3D-1.0.0.rc6](https://github.com/open-mmlab/mmdetection3d/tre
 
 ## Acknowlegements
 We sincerely thank the contributors for their open-source code: [MMCV](https://github.com/open-mmlab/mmcv), [MMDetection](https://github.com/open-mmlab/mmdetection), [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [SST](https://github.com/tusen-ai/SST), [DeLighT](https://github.com/sacmehta/delight).
+
+## Citation
+```
+@article{ERABATI2024200361,
+title = {DeLiVoTr: Deep and light-weight voxel transformer for 3D object detection},
+journal = {Intelligent Systems with Applications},
+volume = {22},
+pages = {200361},
+year = {2024},
+issn = {2667-3053},
+doi = {https://doi.org/10.1016/j.iswa.2024.200361},
+url = {https://www.sciencedirect.com/science/article/pii/S2667305324000371},
+author = {Gopi Krishna Erabati and Helder Araujo}
+}
+```
 
