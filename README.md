@@ -130,8 +130,9 @@ Follow [MMDetection3D-1.0.0.rc6](https://github.com/open-mmlab/mmdetection3d/tre
 We sincerely thank the contributors for their open-source code: [MMCV](https://github.com/open-mmlab/mmcv), [MMDetection](https://github.com/open-mmlab/mmdetection), [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [SST](https://github.com/tusen-ai/SST), [DeLighT](https://github.com/sacmehta/delight).
 
 ## Citation
-```
+```BibTeX
 @article{ERABATI2024200361,
+author = {Gopi Krishna Erabati and Helder Araujo},
 title = {DeLiVoTr: Deep and light-weight voxel transformer for 3D object detection},
 journal = {Intelligent Systems with Applications},
 volume = {22},
@@ -140,7 +141,6 @@ year = {2024},
 issn = {2667-3053},
 doi = {https://doi.org/10.1016/j.iswa.2024.200361},
 url = {https://www.sciencedirect.com/science/article/pii/S2667305324000371},
-author = {Gopi Krishna Erabati and Helder Araujo}
 }
 ```
 
